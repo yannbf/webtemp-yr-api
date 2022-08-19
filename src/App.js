@@ -14,7 +14,7 @@ import "primeicons/primeicons.css"; //icons
 function App() {
   const [latitude, setLatitude] = useState([]);
   const [longitude, setLongitude] = useState([]);
-  const [allData, setAllData] = useState([]);
+  const [allData, setAllData] = useState(null);
 
   const fetchResult = () => {
     fetch(
@@ -193,7 +193,7 @@ function App() {
         </div>
         <div className="chart">
         {/*conditional rendering required for the chart*/}
-          <LineChart />
+        {allData && <LineChart />}
         </div>
       </div>
     </div>
