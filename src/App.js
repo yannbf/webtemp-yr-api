@@ -192,6 +192,7 @@ function App() {
           ></Button>
         </div>
         <div className="chart">
+        {/*conditional rendering required for the chart*/}
           <LineChart />
         </div>
       </div>
