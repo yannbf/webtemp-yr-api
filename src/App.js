@@ -30,129 +30,131 @@ function App() {
 
   // Chart
   const LineChart = () => {
-    // TODO:  Need to figure out implementation of this unused Loop.
-    let timeOfDay = allData.properties.timeseries;
-    let i = 0;
-    while (i < timeOfDay.length) {
-      i++;
-    }
-    const [basicData] = useState({
-      labels: [
-        allData.properties.timeseries[3].time,
-        allData.properties.timeseries[6].time,
-        allData.properties.timeseries[9].time,
-        allData.properties.timeseries[12].time,
-        allData.properties.timeseries[15].time,
-        allData.properties.timeseries[18].time,
-        allData.properties.timeseries[21].time,
-        allData.properties.timeseries[24].time,
-        allData.properties.timeseries[27].time,
-        allData.properties.timeseries[30].time,
-        allData.properties.timeseries[33].time,
-        allData.properties.timeseries[36].time,
-        allData.properties.timeseries[39].time,
-        allData.properties.timeseries[42].time,
-        allData.properties.timeseries[45].time,
-        allData.properties.timeseries[48].time,
-        allData.properties.timeseries[51].time,
-        allData.properties.timeseries[54].time,
-        allData.properties.timeseries[57].time,
-        allData.properties.timeseries[60].time,
-      ],
-      datasets: [
-        {
-          label: "Temperature",
-          data: [
-            allData.properties.timeseries[0].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[3].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[6].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[9].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[12].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[15].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[18].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[21].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[24].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[27].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[30].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[33].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[36].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[39].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[42].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[45].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[48].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[51].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[54].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[57].data.instant.details
-              .air_temperature,
-            allData.properties.timeseries[60].data.instant.details
-              .air_temperature,
-          ],
-          fill: false,
-          borderColor: "#42A5F5",
-          tension: 0.4,
-        },
-      ],
-    });
+    // TODO: Figure out how to iterate over the nested array.
+    let timeOfDay = allData.properties.timeseries
+    for (let i = 0; i < allData.properties.timeseries.length; i++) {
+      console.log(
+        allData.properties.timeseries[i],
+        "NOTICE ME IN THE CONSOLE SENPAI"
+      );
 
-    const getLightTheme = () => {
-      let basicOptions = {
-        maintainAspectRatio: false,
-        aspectRatio: 0.6,
-        plugins: {
-          legend: {
-            labels: {
-              color: "#495057",
+      const [basicData] = useState({
+        labels: [
+          allData.properties.timeseries[6].time,
+          allData.properties.timeseries[9].time,
+          allData.properties.timeseries[12].time,
+          allData.properties.timeseries[15].time,
+          allData.properties.timeseries[18].time,
+          allData.properties.timeseries[21].time,
+          allData.properties.timeseries[24].time,
+          allData.properties.timeseries[27].time,
+          allData.properties.timeseries[30].time,
+          allData.properties.timeseries[33].time,
+          allData.properties.timeseries[36].time,
+          allData.properties.timeseries[39].time,
+          allData.properties.timeseries[42].time,
+          allData.properties.timeseries[45].time,
+          allData.properties.timeseries[48].time,
+          allData.properties.timeseries[51].time,
+          allData.properties.timeseries[54].time,
+          allData.properties.timeseries[57].time,
+          allData.properties.timeseries[60].time,
+        ],
+        datasets: [
+          {
+            label: "Temperature",
+            data: [
+              allData.properties.timeseries[0].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[3].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[6].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[9].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[12].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[15].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[18].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[21].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[24].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[27].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[30].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[33].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[36].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[39].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[42].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[45].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[48].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[51].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[54].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[57].data.instant.details
+                .air_temperature,
+              allData.properties.timeseries[60].data.instant.details
+                .air_temperature,
+            ],
+            fill: false,
+            borderColor: "#42A5F5",
+            tension: 0.4,
+          },
+        ],
+      });
+
+      const getLightTheme = () => {
+        let basicOptions = {
+          maintainAspectRatio: false,
+          aspectRatio: 0.6,
+          plugins: {
+            legend: {
+              labels: {
+                color: "#495057",
+              },
             },
           },
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: "#495057",
+          scales: {
+            x: {
+              ticks: {
+                color: "#495057",
+              },
+              grid: {
+                color: "#ebedef",
+              },
             },
-            grid: {
-              color: "#ebedef",
+            y: {
+              ticks: {
+                color: "#495057",
+              },
+              grid: {
+                color: "#ebedef",
+              },
             },
           },
-          y: {
-            ticks: {
-              color: "#495057",
-            },
-            grid: {
-              color: "#ebedef",
-            },
-          },
-        },
+        };
+        return { basicOptions };
       };
-      return { basicOptions };
-    };
-    const { basicOptions } = getLightTheme();
-    return (
-      <div>
-        <div className="card">
-          <Chart type="line" data={basicData} options={basicOptions} />
+      const { basicOptions } = getLightTheme();
+      return (
+        <div>
+          <div className="card">
+            <Chart type="line" data={basicData} options={basicOptions} />
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   };
 
   return (
@@ -191,10 +193,7 @@ function App() {
             onClick={fetchResult}
           ></Button>
         </div>
-        <div className="chart">
-        {/*conditional rendering required for the chart*/}
-        {allData && <LineChart />}
-        </div>
+        <div className="chart">{allData && <LineChart />}</div>
       </div>
     </div>
   );
